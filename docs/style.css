@@ -1,0 +1,202 @@
+@media (prefers-reduced-motion: no-preference) {
+    * {
+      scroll-behavior: smooth;
+    }
+  }
+
+html{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    padding:0;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/*moves the link way outside of the browser. 
+The 1px size and the overflow: hidden; are for 
+special cases where user has deactivated absolute positioning.*/
+.skip{
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
+
+/*When the link is focused, it has to be visible.*/
+.skip:focus{
+    position:static;
+    width:auto;
+    height:auto;
+}
+
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    height:5rem;
+    background-color: #1E2640;  
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+svg{
+    width:max(80px, 6vw);
+    padding: 0.4rem;
+}
+
+.title{
+    color: white;
+    font-size: min(8vw, 2em);
+    text-align: center;
+    padding-left:max(17vw, 2em);
+}
+
+nav{
+     width: 50%;
+     max-width: 300px;
+     height: 100%;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-inline-start: 0;
+    margin-block: 0;
+    height: 100%;
+}
+
+nav li{
+    margin: 0 0.2rem;
+    padding: 0.2rem;
+    display: block;
+}
+
+nav ul li:hover {
+    background-color: #dfdfe23b;
+    color: #1b1b32;
+    cursor: pointer;
+  }
+
+li a {
+    color:white;
+}
+
+form{
+    padding-top:90px;
+    width:50%;
+    margin:auto;
+}
+
+fieldset{
+    border:none;
+    margin:3rem 0;
+}
+
+legend{
+    font-size:2rem;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:#922C40;
+}
+
+hr{
+    height:4px;
+    border:none;
+    background-color:#DC9750;
+}
+
+.info{
+    padding:10px 0 0 0px;
+}
+
+.info input{
+    display: inline-block;
+    width: 50%;
+    text-align: left;
+}
+
+.info label{
+    display: inline-block;
+    width: 10%;
+    min-width: 55px;
+    text-align: right;
+}
+
+#date{
+    width:50.5%;
+}
+
+#QUIZ section{
+    margin-bottom:3rem;
+}
+
+#QUIZ section p, section input{
+    margin-left:1rem;
+}
+
+select, textarea{
+    margin-left:1rem;
+}
+
+#COMMENTS p{
+    margin-left:1rem;
+}
+
+textarea{
+    min-width:20rem;
+    max-width:20rem;
+    min-height:5rem;
+    max-height:15rem;
+}
+
+/*send button*/
+button[type=submit]{
+    display:block;
+    text-align: center;
+    margin: 2rem auto;
+    width:85%;
+    height:3.5rem;
+    font-size:1.5em;
+    background-color:rgb(209, 207, 207);
+    color:#1E2640;
+    border:3px solid #1E2640;
+}
+
+footer{
+    text-align: center;
+    padding:1em;
+    background-color:#DC9750;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight:bold;
+    font-size:0.7em;
+}
+
+footer p{
+    margin:0;
+}
+
+footer a{
+    color:black;
+}
+
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+
+
+

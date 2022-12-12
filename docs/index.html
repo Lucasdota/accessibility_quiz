@@ -6,30 +6,151 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A quiz presenting the main techniques to design a complete accessible page.">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/thumbs-up.png">    
+    <link rel="icon" href="images/like.png">    
     <title>An Accessibility Quiz | Content for Everyone</title>
 </head>
 <body>
-    <button href="#main">Main Content</button><!--hidden button for accessibility, takes the user straight to the main content-->
+    <button class="skip"><a href="#QUIZ">Quiz Content</a></button><!--hidden button for accessibility, takes the user straight to the main content-->
     <header>
-        <img name="logo" href="images/codelogo.svg" aria-hidden="true"><!--aria-hidden=true to screen readers to ignore this image as it is decorative-->
-        <h1 name="title">Accessibility Quiz</h1>
-        <nav aria-label="navigation bar"><!--aria-lebel gives it an accessible name-->
-            <h2 aria-labelledby="navigation bar" href="#INFO" name="INFO">INFO</h2><!--aria-labelledby gives it an accessible reference to where it belongs to-->
-            <h2 aria-labelledby="navigation bar" href="#QUIZ" name="QUIZ">QUIZ</h2>
-            <h2 aria-labelledby="navigation bar" href="#COMMENTS" name="COMMENTS">COMMENTS</h2>
-        </nav>
+        <svg name="logo" href="images/codelogo.svg" aria-hidden="true" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+        <path style="fill:#E4EAF8;" d="M486.881,465.503H25.119c-9.446,0-17.102-7.656-17.102-17.102V63.599
+            c0-9.446,7.656-17.102,17.102-17.102h461.762c9.446,0,17.102,7.656,17.102,17.102v384.802
+            C503.983,457.846,496.326,465.503,486.881,465.503z"/>
+        <polygon style="fill:#00C3FF;" points="153.386,149.111 84.977,217.52 256,422.747 256,149.111 "/>
+        <g>
+            <polygon style="fill:#00AAF0;" points="153.386,149.111 84.977,217.52 179.04,217.52 	"/>
+            <polygon style="fill:#00AAF0;" points="179.04,217.52 256,422.747 256,217.52 	"/>
+        </g>
+        <polygon style="fill:#80E1FF;" points="179.04,217.52 256,149.111 256,217.52 "/>
+        <path style="fill:#5B5D6E;" d="M486.881,465.503H256V89.253h247.983v359.148C503.983,457.846,496.326,465.503,486.881,465.503z"/>
+        <path style="fill:#D5DCED;" d="M503.983,89.253H50.772V46.497h436.109c9.446,0,17.102,7.656,17.102,17.102V89.253z"/>
+        <rect x="375.716" y="46.497" style="fill:#FF5050;" width="42.756" height="42.756"/>
+        <rect x="418.472" y="46.497" style="fill:#FFF082;" width="42.756" height="42.756"/>
+        <path style="fill:#A0FFB4;" d="M503.983,89.253h-42.756V46.497h25.653c9.446,0,17.102,7.656,17.102,17.102V89.253z"/>
+        <path d="M486.881,38.48H264.017v-9.086c0-4.427-3.589-8.017-8.017-8.017c-4.427,0-8.017,3.589-8.017,8.017v9.086H25.119
+            C11.268,38.48,0,49.748,0,63.599v384.802c0,13.851,11.268,25.119,25.119,25.119h222.864v9.086c0,4.427,3.589,8.017,8.017,8.017
+            c4.427,0,8.017-3.589,8.017-8.017v-9.086h222.864c13.851,0,25.119-11.268,25.119-25.119V63.599
+            C512,49.748,500.732,38.48,486.881,38.48z M495.967,63.599v17.637h-26.722V54.514h17.637
+            C491.891,54.514,495.967,58.589,495.967,63.599z M426.489,81.236V54.514h26.722v26.722H426.489z M383.733,81.236V54.514h26.722
+            v26.722H383.733z M367.699,54.514v26.722H264.017V54.514H367.699z M247.983,81.236H58.789V54.514h189.194V81.236z M25.119,54.514
+            h17.637v26.722H16.033V63.599C16.033,58.589,20.109,54.514,25.119,54.514z M25.119,457.486c-5.01,0-9.086-4.076-9.086-9.086V97.269
+            h231.95v43.825h-94.597c-2.126,0-4.165,0.844-5.668,2.348l-68.409,68.409c-2.932,2.932-3.145,7.616-0.49,10.8l169.164,202.998
+            v31.837H25.119z M247.983,225.537v153.001l-57.376-153.001H247.983z M200.126,209.503l47.858-42.541v42.541H200.126z
+            M182.444,203.767l-17.49-46.64h69.96L182.444,203.767z M150.251,163.582l17.22,45.921h-63.14L150.251,163.582z M173.484,225.537
+            l58.411,155.762L102.093,225.537H173.484z M486.881,457.486H264.017V97.269h231.95v351.132
+            C495.967,453.411,491.891,457.486,486.881,457.486z"/>
+        <path d="M298.756,165.678h17.102c4.427,0,8.017-3.589,8.017-8.017c0-4.427-3.589-8.017-8.017-8.017h-17.102
+            c-4.427,0-8.017,3.589-8.017,8.017C290.739,162.089,294.328,165.678,298.756,165.678z"/>
+        <path d="M298.756,234.088h17.102c4.427,0,8.017-3.589,8.017-8.017s-3.589-8.017-8.017-8.017h-17.102
+            c-4.427,0-8.017,3.589-8.017,8.017S294.328,234.088,298.756,234.088z"/>
+        <path d="M316.392,191.866c0,4.427,3.589,8.017,8.017,8.017h17.102c4.427,0,8.017-3.589,8.017-8.017s-3.589-8.017-8.017-8.017
+            h-17.102C319.982,183.85,316.392,187.439,316.392,191.866z"/>
+        <path d="M461.228,149.645H350.063c-4.427,0-8.017,3.589-8.017,8.017c0,4.427,3.589,8.017,8.017,8.017h111.165
+            c4.427,0,8.017-3.589,8.017-8.017C469.244,153.234,465.655,149.645,461.228,149.645z"/>
+        <path d="M461.228,218.054H350.063c-4.427,0-8.017,3.589-8.017,8.017s3.589,8.017,8.017,8.017h111.165
+            c4.427,0,8.017-3.589,8.017-8.017S465.655,218.054,461.228,218.054z"/>
+        <path d="M461.228,183.85h-85.511c-4.427,0-8.017,3.589-8.017,8.017s3.589,8.017,8.017,8.017h85.511c4.427,0,8.017-3.589,8.017-8.017
+            S465.655,183.85,461.228,183.85z"/>
+        <path d="M349.528,260.276c0-4.427-3.589-8.017-8.017-8.017h-17.102c-4.427,0-8.017,3.589-8.017,8.017
+            c0,4.427,3.589,8.017,8.017,8.017h17.102C345.939,268.292,349.528,264.703,349.528,260.276z"/>
+        <path d="M461.228,252.259h-85.511c-4.427,0-8.017,3.589-8.017,8.017c0,4.427,3.589,8.017,8.017,8.017h85.511
+            c4.427,0,8.017-3.589,8.017-8.017C469.244,255.848,465.655,252.259,461.228,252.259z"/>
+        <path d="M298.756,302.497h17.102c4.427,0,8.017-3.589,8.017-8.017c0-4.427-3.589-8.017-8.017-8.017h-17.102
+            c-4.427,0-8.017,3.589-8.017,8.017C290.739,298.908,294.328,302.497,298.756,302.497z"/>
+        <path d="M323.875,362.889c0-4.427-3.589-8.017-8.017-8.017h-17.102c-4.427,0-8.017,3.589-8.017,8.017
+            c0,4.427,3.589,8.017,8.017,8.017h17.102C320.285,370.906,323.875,367.317,323.875,362.889z"/>
+        <path d="M316.392,328.685c0,4.427,3.589,8.017,8.017,8.017h17.102c4.427,0,8.017-3.589,8.017-8.017c0-4.427-3.589-8.017-8.017-8.017
+            h-17.102C319.982,320.668,316.392,324.257,316.392,328.685z"/>
+        <path d="M461.228,286.463H350.063c-4.427,0-8.017,3.589-8.017,8.017c0,4.427,3.589,8.017,8.017,8.017h111.165
+            c4.427,0,8.017-3.589,8.017-8.017C469.244,290.053,465.655,286.463,461.228,286.463z"/>
+        <path d="M461.228,354.873H350.063c-4.427,0-8.017,3.589-8.017,8.017c0,4.427,3.589,8.017,8.017,8.017h111.165
+            c4.427,0,8.017-3.589,8.017-8.017C469.244,358.462,465.655,354.873,461.228,354.873z"/>
+        <path d="M461.228,320.668h-85.511c-4.427,0-8.017,3.589-8.017,8.017c0,4.427,3.589,8.017,8.017,8.017h85.511
+            c4.427,0,8.017-3.589,8.017-8.017C469.244,324.257,465.655,320.668,461.228,320.668z"/>
+        <path d="M341.511,389.077h-17.102c-4.427,0-8.017,3.589-8.017,8.017c0,4.427,3.589,8.017,8.017,8.017h17.102
+            c4.427,0,8.017-3.589,8.017-8.017C349.528,392.667,345.939,389.077,341.511,389.077z"/>
+        <path d="M461.228,389.077h-85.511c-4.427,0-8.017,3.589-8.017,8.017c0,4.427,3.589,8.017,8.017,8.017h85.511
+            c4.427,0,8.017-3.589,8.017-8.017C469.244,392.667,465.655,389.077,461.228,389.077z"/>
+        </svg><!--aria-hidden=true to tell screen readers to ignore this image as it is decorative-->
+    <h1 class="title">Accessibility Quiz</h1>
+    <nav aria-label="navigation bar"><!--aria-label gives it an accessible name-->
+        <ul>
+            <li aria-labelledby="navigation bar" name="INFO"><a href="#INFO">INFO</a></li><!--aria-labelledby gives it an accessible reference to where it belongs to-->
+            <li aria-labelledby="navigation bar" name="QUIZ"><a href="#QUIZ">QUIZ</a></li>
+            <li aria-labelledby="navigation bar" name="COMMENTS"><a href="#COMMENTS">COMMENTS</a></li>
+        </ul>
+    </nav>
     </header><!--end of header-->
-    <fieldset id="INFO">
-        <legend>Interviewded Info</legend>
-        <hr>
-        <label for="name">
-            Name:<input id="name" name="name" type="text" required>
-        </label>
-        <label for="email">
-            email:<input id="email" name="email" type="email" required>
-        </label>
-
-    </fieldset>
+    <main>
+        <form method="post" action="destionationurl.com">
+            <fieldset id="INFO" role="region" aria-labelledby="personal information">
+                <legend>Interviewded Info</legend>
+                <hr>
+                <div class="info">
+                <label for="name">Name:</label> <input id="name" name="name" type="text" required>
+                </div>
+                <div class="info">
+                <label for="email">Email:</label> <input id="email" name="email" type="email" required>
+                </div>
+                <div class="info">
+                <label for="date">D.o.B:<span class="sr-only">(Date of Birth)</span></label> <input id="date" name="date" type="date" required>      
+                </div>
+            </fieldset><!--end of INFO fieldset-->
+            <fieldset id="QUIZ" role="region" aria-labelledby="accessibility quiz">
+                <legend>Quiz</legend>
+                <hr>
+                <section>
+                    <h2>Question #1</h2>   
+                    <p for="question1">The legend element represents a caption for the content of its parent fieldset element.</p>  
+                    <input type="radio" id="question1" name="question1" role="button">True<br> 
+                    <input type="radio" id="question1" name="question1" role="button">False<br> 
+                </section>
+                <section>
+                    <h2>Question #2</h2>   
+                    <p for="question2">A label element nesting an input element is required to have a for attribute with the same value as the input's id.</p> 
+                    <input type="radio" id="question2" name="question2" role="button">True<br> 
+                    <input type="radio" id="question2" name="question2" role="button">False<br>     
+                </section>
+                <section>
+                    <h2>Question #3</h2>   
+                    <p for="question3">When we have more than one type of landmark, we must label each of them. This is done with the attribute aria-label.</p>
+                    <input type="radio" id="question3" name="question3" role="button">True<br> 
+                    <input type="radio" id="question3" name="question3" role="button">False<br>      
+                </section>
+                <section>
+                    <h2>Question #4</h2>   
+                    <p for="question4">To tell screen readers to read an element the attribute aria-hidden with a value of 'true' is used.</p>
+                    <input type="radio" id="question4" name="question4" role="button">True<br> 
+                    <input type="radio" id="question4" name="question4" role="button">False<br>      
+                </section>
+            </fieldset><!--end of QUIZ fieldset-->
+            <fieldset id="COMMENTS" role="region" aria-labelledby="comments">
+                <legend>Comments</legend>
+                <hr>
+                <section>
+                    <p>Do you have any type of disability?</p>
+                    <select aria-label="any disability" required><!--aria-label describes the content-->
+                        <option disabled selected>Select an option</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </section>
+                <section>
+                    <p>Do you have any comments:</p>
+                    <textarea aria-label="write your comments" rols="20" cols="50" max-length="250" placeholder="Write here any additional comments"></textarea>
+                </section>
+            </fieldset><!--end of COMMENTS fieldset-->
+            <button type="submit" aria-label="button for submiting answers">Send</button>
+        </form>  
+    </main>
+    <footer>   
+        <p>Designed by <a href="https://www.linkedin.com/in/lucas-dota-trombini/" aria-label="linkedin profile">Lucas Dota</a></p>
+        <address>
+            <p aria-label="city">São Paulo City</p>
+            <p aria-label="estate">São Paulo Estate</p>
+            <p aria-label="country">Brazil</p>
+        </address>    
+    </footer>  
 </body>
 </html>
