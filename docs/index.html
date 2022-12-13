@@ -10,7 +10,7 @@
     <title>An Accessibility Quiz | Content for Everyone</title>
 </head>
 <body>
-    <button class="skip"><a href="#QUIZ">Quiz Content</a></button><!--hidden button for accessibility, takes the user straight to the main content-->
+    <button class="skip" aria-label="Go to main content"><a href="#QUIZ">Quiz Content</a></button><!--hidden button for accessibility, takes the user straight to the main content-->
     <header>
         <svg name="logo" href="images/codelogo.svg" aria-hidden="true" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
@@ -74,11 +74,11 @@
             c4.427,0,8.017-3.589,8.017-8.017C469.244,392.667,465.655,389.077,461.228,389.077z"/>
         </svg><!--aria-hidden=true to tell screen readers to ignore this image as it is decorative-->
     <h1 class="title">Accessibility Quiz</h1>
-    <nav aria-label="navigation bar"><!--aria-label gives it an accessible name-->
+    <nav>
         <ul>
-            <li aria-labelledby="navigation bar" name="INFO"><a href="#INFO">INFO</a></li><!--aria-labelledby gives it an accessible reference to where it belongs to-->
-            <li aria-labelledby="navigation bar" name="QUIZ"><a href="#QUIZ">QUIZ</a></li>
-            <li aria-labelledby="navigation bar" name="COMMENTS"><a href="#COMMENTS">COMMENTS</a></li>
+            <li name="INFO"><a href="#INFO">INFO</a></li>
+            <li name="QUIZ"><a href="#QUIZ">QUIZ</a></li>
+            <li name="COMMENTS"><a href="#COMMENTS">COMMENTS</a></li>
         </ul>
     </nav>
     </header><!--end of header-->
@@ -103,26 +103,26 @@
                 <section>
                     <h2>Question #1</h2>   
                     <p for="question1">The legend element represents a caption for the content of its parent fieldset element.</p>  
-                    <input type="radio" id="question1" name="question1" role="button">True<br> 
-                    <input type="radio" id="question1" name="question1" role="button">False<br> 
+                    <input type="radio" id="question1" name="question1" aria-label="True">True<br> 
+                    <input type="radio" id="question1" name="question1" aria-label="False">False<br> 
                 </section>
                 <section>
                     <h2>Question #2</h2>   
                     <p for="question2">A label element nesting an input element is required to have a for attribute with the same value as the input's id.</p> 
-                    <input type="radio" id="question2" name="question2" role="button">True<br> 
-                    <input type="radio" id="question2" name="question2" role="button">False<br>     
+                    <input type="radio" id="question2" name="question2" aria-label="True">True<br> 
+                    <input type="radio" id="question2" name="question2" aria-label="False">False<br>     
                 </section>
                 <section>
                     <h2>Question #3</h2>   
                     <p for="question3">When we have more than one type of landmark, we must label each of them. This is done with the attribute aria-label.</p>
-                    <input type="radio" id="question3" name="question3" role="button">True<br> 
-                    <input type="radio" id="question3" name="question3" role="button">False<br>      
+                    <input type="radio" id="question3" name="question3" aria-label="True">True<br> 
+                    <input type="radio" id="question3" name="question3" aria-label="False">False<br>      
                 </section>
                 <section>
                     <h2>Question #4</h2>   
                     <p for="question4">To tell screen readers to read an element the attribute aria-hidden with a value of 'true' is used.</p>
-                    <input type="radio" id="question4" name="question4" role="button">True<br> 
-                    <input type="radio" id="question4" name="question4" role="button">False<br>      
+                    <input type="radio" id="question4" name="question4" aria-label="True">True<br> 
+                    <input type="radio" id="question4" name="question4" aria-label="False">False<br>      
                 </section>
             </fieldset><!--end of QUIZ fieldset-->
             <fieldset id="COMMENTS" role="region" aria-labelledby="comments">
@@ -140,16 +140,16 @@
                     <p>Do you have any comments:</p>
                     <textarea aria-label="write your comments" rols="20" cols="50" max-length="250" placeholder="Write here any additional comments"></textarea>
                 </section>
+                <button type="submit" aria-label="button for submiting answers">Send</button>
             </fieldset><!--end of COMMENTS fieldset-->
-            <button type="submit" aria-label="button for submiting answers">Send</button>
         </form>  
     </main>
     <footer>   
         <p>Designed by <a href="https://www.linkedin.com/in/lucas-dota-trombini/" aria-label="linkedin profile">Lucas Dota</a></p>
         <address>
-            <p aria-label="city">São Paulo City</p>
-            <p aria-label="estate">São Paulo Estate</p>
-            <p aria-label="country">Brazil</p>
+            <p aria-label="São Paulo city">São Paulo City</p>
+            <p aria-label="São Paulo estate">São Paulo Estate</p>
+            <p aria-label="Brazil country">Brazil</p>
         </address>    
     </footer>  
 </body>

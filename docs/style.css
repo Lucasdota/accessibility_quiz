@@ -45,7 +45,7 @@ header{
 }
 
 svg{
-    width:max(80px, 6vw);
+    width:max(40px, 4rem);
     padding: 0.4rem;
 }
 
@@ -159,7 +159,7 @@ select, textarea{
 }
 
 textarea{
-    min-width:20rem;
+    min-width:93%;
     max-width:20rem;
     min-height:5rem;
     max-height:15rem;
@@ -169,7 +169,7 @@ textarea{
 button[type=submit]{
     display:block;
     text-align: center;
-    margin: 2rem auto;
+    margin: 2rem auto 0;
     width:85%;
     height:3.5rem;
     font-size:1.5em;
