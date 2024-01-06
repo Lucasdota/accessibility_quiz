@@ -8,11 +8,10 @@ Main features:
 - ARIA attributes
 - Design best practices
 - Descriptive titles and attributes for accessibility tools
-- form and list design
-- footer with some information
-- viewport meta tag to adjust the width according to the device's width
-- description meta tag to help browsers better understand the content
-- link tag to add icon to the browser tab bar
-- and more
+- Form and list design
+- Footer with some information
+- Viewport meta tag to adjust the width according to the device's width
+- Description meta tag to help browsers better understand the content
+- Link tag to add icon to the browser tab bar
 
     
